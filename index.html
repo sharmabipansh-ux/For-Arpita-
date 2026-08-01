@@ -161,10 +161,28 @@ opacity:0;
   .photo{
 width:300px;
 max-width:90%;
+max-height:60vh;
+object-fit:cover;
 border-radius:25px;
 margin:20px 0;
-box-shadow:0 0 30px rgba(255,255,255,0.4);
-  }
+box-shadow:0 0 40px rgba(255,255,255,0.6);
+animation:zoom 6s ease-in-out infinite;
+transition:0.5s;
+}
+
+@keyframes zoom{
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.06);
+}
+
+100%{
+transform:scale(1);
+}
+}
 </style>
 
 </head>
