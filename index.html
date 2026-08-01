@@ -67,7 +67,9 @@ box-shadow:0 0 25px white;
 display:none;
 margin-top:30px;
 font-size:22px;
-animation:fade 1s;
+line-height:1.6;
+animation:fade 1.5s ease;
+text-shadow:0 0 15px rgba(255,255,255,0.7);
 }
 
 @keyframes fade{
@@ -80,6 +82,7 @@ position:absolute;
 color:#fff;
 font-size:22px;
 animation:float 5s linear infinite;
+filter:drop-shadow(0 0 10px white);
 }
 
 @keyframes float{
@@ -120,7 +123,13 @@ Love You Forever ♾️
 <script>
 
 function showLove(){
-document.getElementById("msg").style.display="block";
+
+let msg=document.getElementById("msg");
+
+msg.style.display="block";
+
+document.querySelector("button").style.display="none";
+
 }
 
 setInterval(()=>{
