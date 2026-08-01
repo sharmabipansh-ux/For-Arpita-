@@ -95,40 +95,73 @@ transform:translateY(-120vh);
 opacity:1;
 }
 }
+  .slide{
+display:none;
+text-align:center;
+color:white;
+}
+
+.slide.active{
+display:block;
+animation:fade 1s;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
-
+  <div class="slide active">
 <h1>For Arpita ❤️</h1>
-
 <p>Happy Girlfriend's Day 🌸</p>
-
-<button onclick="showLove()">Tap Here ❤️</button>
-
-<div id="msg">
-You are the most beautiful chapter of my life.<br><br>
-
-No matter where life takes us,<br>
-you'll always have a special place in my heart. ❤️<br><br>
-
-Love You Forever ♾️
+<button onclick="nextSlide()">Next ❤️</button>
 </div>
 
+
+<div class="slide">
+<h1>Our Little Story ✨</h1>
+<p>
+Every moment with you becomes a beautiful memory.
+</p>
+<button onclick="nextSlide()">Next 💕</button>
+</div>
+
+
+<div class="slide">
+<h1>Reasons I Love You 💌</h1>
+<p>
+Your smile, your care, your craziness<br>
+makes my life better ❤️
+</p>
+<button onclick="nextSlide()">Next ❤️</button>
+</div>
+
+
+<div class="slide">
+<h1>Forever Us ♾️</h1>
+<p>
+No matter what happens,<br>
+you will always be special to me ❤️
+</p>
 </div>
 
 <script>
 
-function showLove(){
+let currentSlide = 0;
 
-let msg=document.getElementById("msg");
+let slides = document.querySelectorAll(".slide");
 
-msg.style.display="block";
+function nextSlide(){
 
-document.querySelector("button").style.display="none";
+slides[currentSlide].classList.remove("active");
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = slides.length - 1;
+}
+
+slides[currentSlide].classList.add("active");
 
 }
 
