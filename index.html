@@ -132,6 +132,14 @@ backdrop-filter:blur(10px);
 box-shadow:0 0 30px rgba(255,255,255,0.25);
 line-height:1.6;
   }
+  #surprise{
+display:none;
+margin-top:25px;
+font-size:22px;
+line-height:1.6;
+animation:fade 1.5s ease;
+text-shadow:0 0 15px white;
+  }
 </style>
 
 </head>
@@ -192,6 +200,18 @@ No matter where life takes us,<br>
 you will always be special to me. ❤️
 </p>
 
+<button onclick="surprise()">Tap For Surprise 💝</button>
+
+<div id="surprise">
+<br>
+You are not just a part of my life,<br>
+you are one of the most beautiful reasons behind my smile. ❤️<br><br>
+
+Thank you for being you. 🌸<br><br>
+
+Love You Forever ♾️
+</div>
+
 </div>
 
 
@@ -233,6 +253,30 @@ document.body.appendChild(h);
 setTimeout(()=>h.remove(),5000);
 
 },300);
+  function surprise(){
+
+document.getElementById("surprise").style.display="block";
+
+for(let i=0;i<20;i++){
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.style.position="absolute";
+h.style.left=Math.random()*100+"vw";
+h.style.top=Math.random()*100+"vh";
+h.style.fontSize="30px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},2000);
+
+}
+
+  }
 
 </script>
 
