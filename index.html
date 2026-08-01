@@ -203,15 +203,6 @@ you will always be special to me. ❤️
 <button onclick="surprise()">Tap For Surprise 💝</button>
 
 <div id="surprise">
-<br>
-You are not just a part of my life,<br>
-you are one of the most beautiful reasons behind my smile. ❤️<br><br>
-
-Thank you for being you. 🌸<br><br>
-
-Love You Forever ♾️
-</div>
-
 </div>
 
 
@@ -255,7 +246,24 @@ setTimeout(()=>h.remove(),5000);
 },300);
   function surprise(){
 
-document.getElementById("surprise").style.display="block";
+let box = document.getElementById("surprise");
+
+box.innerHTML = `
+Hey Arpita meri jaanu ❤️<br><br>
+
+I hope tujhe ye sab pasand aa raha hoga. 🫀🎀<br><br>
+
+I just want you to know that after my mother, you hold the most special place in my heart. ❤️<br><br>
+
+Tujhse pyaar karna meri life ke sabse best decisions me se ek tha. Jabhse tu meri zindagi me aayi hai, tune meri life ko itna beautiful bana diya. 🌸<br><br>
+
+Thank you for coming into my life, meri wifeyyy Arpita. ❤️♾️<br><br>
+
+I love you so much. 🫀
+`;
+
+box.style.display="block";
+
 
 for(let i=0;i<20;i++){
 
