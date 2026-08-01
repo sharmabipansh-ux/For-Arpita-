@@ -99,12 +99,39 @@ opacity:1;
 display:none;
 text-align:center;
 color:white;
+transform:scale(0.8);
+opacity:0;
+transition:0.8s ease;
 }
 
 .slide.active{
 display:block;
-animation:fade 1s;
+transform:scale(1);
+opacity:1;
+animation:slideIn 0.8s ease;
 }
+
+@keyframes slideIn{
+from{
+transform:translateY(40px) scale(0.8);
+opacity:0;
+}
+
+to{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+}
+  .memory-card{
+background:rgba(255,255,255,0.15);
+padding:25px;
+border-radius:25px;
+margin:25px auto;
+max-width:400px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,255,255,0.25);
+line-height:1.6;
+  }
 </style>
 
 </head>
@@ -119,31 +146,30 @@ animation:fade 1s;
 
 
 <div class="slide">
+
 <h1>Our Little Story ✨</h1>
+
+<div class="memory-card">
+
 <p>
-Every moment with you becomes a beautiful memory.
+From random conversations to beautiful moments,
+you slowly became someone very special to me. ❤️
 </p>
+
+<br>
+
+<p>
+Every smile, every fight, every little memory
+is something I want to cherish forever. 🌸
+</p>
+
+</div>
+
 <button onclick="nextSlide()">Next 💕</button>
+
 </div>
 
 
-<div class="slide">
-<h1>Reasons I Love You 💌</h1>
-<p>
-Your smile, your care, your craziness<br>
-makes my life better ❤️
-</p>
-<button onclick="nextSlide()">Next ❤️</button>
-</div>
-
-
-<div class="slide">
-<h1>Forever Us ♾️</h1>
-<p>
-No matter what happens,<br>
-you will always be special to me ❤️
-</p>
-</div>
 
 <script>
 
