@@ -140,6 +140,24 @@ line-height:1.6;
 animation:fade 1.5s ease;
 text-shadow:0 0 15px white;
   }
+  .sparkle{
+position:absolute;
+color:white;
+font-size:15px;
+animation:spark 2s ease forwards;
+}
+
+@keyframes spark{
+0%{
+transform:scale(0);
+opacity:1;
+}
+
+100%{
+transform:scale(2) translateY(-100px);
+opacity:0;
+}
+}
 </style>
 
 </head>
@@ -285,7 +303,24 @@ h.remove();
 }
 
   }
+for(let i=0;i<20;i++){
 
+let s=document.createElement("div");
+
+s.className="sparkle";
+
+s.innerHTML="✨";
+
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},2000);
+
+  }
 </script>
 
 </body>
